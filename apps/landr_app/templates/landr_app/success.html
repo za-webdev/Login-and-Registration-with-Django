@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success page</title>
+</head>
+<body>
+	<h1>Success! Welcome, {{user.first_name}} {{user.last_name}}</h1>
+
+	<form action="/recipe" method="post">
+		{%csrf_token%}
+		Recipe name:<input type="text" name="name">
+		Ingredients:<br><textarea name=ingredients rows="10" cols='80'></textarea><br>
+		Instructions:<br><textarea name=ingredients rows="10" cols='80'></textarea><br>
+		<input type='submit' value="submit"></input>
+	</form>
+
+	<a href="/logout"><button>LogOut</button></a>
+
+</body>
+</html>
